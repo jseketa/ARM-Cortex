@@ -1,0 +1,17 @@
+#exclude everything
+*
+#unexclude directories
+!*/
+#unexclude all files in src folders
+!**/src/**
+#unexclude all files in in folders
+!**/inc/**
+#unexclude .uvproj and .uvprojx files
+!*.uvproj
+!*.uvprojx
+#unexclude .gitignore
+!.gitignore
+
+
+
+
