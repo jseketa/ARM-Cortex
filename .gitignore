@@ -2,6 +2,8 @@
 *
 #unexclude directories
 !*/
+#unexclude cmsis
+!/cmsis/*
 #unexclude all files in src folders
 !**/src/**
 #unexclude all files in in folders
