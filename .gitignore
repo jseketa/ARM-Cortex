@@ -14,6 +14,8 @@
 !*.uvopt
 #unexclude readme files
 !*.md
+#unexclude cleanup batch
+!clean.cmd
 #unexclude .gitignore
 !.gitignore
 
