@@ -1,24 +1,10 @@
 #include <core_cm3.h>
 #include <stm32f10x.h>
+
 typedef enum
-{
-	Pin_0 = 0x0001,
-	Pin_1 = 0x0002,
-	Pin_2 = 0x0004,
-	Pin_3 = 0x0008,
-	Pin_4 = 0x0010,
-	Pin_5 = 0x0020,
-	Pin_6 = 0x0040,
-	Pin_7 = 0x0080,
-	Pin_8 = 0x0100,
-	Pin_9 = 0x0200,
-	Pin_10 = 0x0400,
-	Pin_11 = 0x0800,
-	Pin_12 = 0x1000,
-	Pin_13 = 0x2000,
-	Pin_14 = 0x4000,
-	Pin_15 = 0x8000,
-	Pin_All = 0xFFFF
+{	Pin_0 = 0,	Pin_1 = 1,	Pin_2 = 2,	Pin_3 = 3,	Pin_4 = 4,	Pin_5 = 5,
+	Pin_6 = 6,	Pin_7 = 7,	Pin_8 = 8,	Pin_9 = 9,	Pin_10 = 10,	Pin_11 = 11,
+	Pin_12 = 12,	Pin_13 = 13,	Pin_14 = 14,	Pin_15 = 15,	Pin_All = 0xFFFF
 }PinNumber;
 
 typedef struct
@@ -31,6 +17,33 @@ typedef struct
   __IO uint32_t BRR;
   __IO uint32_t LCKR;
 } GPIO_registers;
+
+typedef enum
+{
+	speed_10MHz = 0x1,
+	speed_2MHz = 0x2,
+	speed_50MHz = 0x3
+}GPIO_speed;
+
+typedef enum
+{
+	input_analog = 0x0,
+	input_floating = 0x1,
+	input_pupd = 0x2,
+	//---
+	output_pp = 0x0,
+	output_od = 0x1,
+	//---
+	alternate_pp = 0x2,
+	alternate_od = 0x3
+}GPIO_mode;
+
+typedef struct
+{
+	uint16_t Pin;
+	GPIO_mode Mode;
+	GPIO_speed Speed;
+}GPIO_setup;
 
 //typedef enum
 //{ 

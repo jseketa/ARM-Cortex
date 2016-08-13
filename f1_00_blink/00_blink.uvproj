@@ -361,7 +361,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\inc;..\f1libs\inc</IncludePath>
+              <IncludePath>.\inc;..\f1libs\inc;..\js_f1_libs\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

@@ -11,6 +11,7 @@
 #unexclude .uvproj and .uvprojx files
 !*.uvproj
 !*.uvprojx
+!*.uvopt
 #unexclude .gitignore
 !.gitignore
 
