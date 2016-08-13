@@ -12,6 +12,8 @@
 !*.uvproj
 !*.uvprojx
 !*.uvopt
+#unexclude readme files
+!*.md
 #unexclude .gitignore
 !.gitignore
 
